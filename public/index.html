@@ -3,78 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BistroPal</title>
+    <title>RestroMate</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-3">
-        <a href="#" class="navbar-brand">BistroPal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-list"><a href="./restaurant.html" class="nav-link">Restaurants</a></li>
-                <li class="nav-list"><a href="./add_restaurant.html" class="nav-link">Add Restaurants</a></li>
-                <li class="nav-list"><a href="./aboutUs.html" class="nav-link">About Us</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class=" pt-5">
-        <section class="text-center py-5" style="background-color:#e9ecef;">
-            <h1 class="display-5 mt-5 mb-3">Welcome to BistroPal</h1>
-            <p class="lead">Elevate your restaurant's performance with our efficient restaurant management system.</p>
-            <hr class="mx-3">
-            <p>Explore the features using the navigation links above and experience streamlined restaurant management.</p>
-        </section>
-        <section class="container mt-2">
-            <h1 class="my-4">Menu Management</h1>
-            <div class="card-group">
-                <div class="card me-4">
-                    <img style="width: auto;" src="https://placehold.co/400x300/EFEFEFF/grey?text=Special Dish 1" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Special Dish 1</h5>
-                        <p class="card-text">Delicious description of the dish. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                </div>
-                <div class="card">
-                    <img style="width : auto" src="https://placehold.co/400x300/EFEFEFF/grey?text=Special Dish 2" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Special Dish 2</h5>
-                        <p class="card-text">Another tempting dish description. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<body style="background-color: #013328;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 container rounded-bottom-5" style="background-color: rgb(4, 145, 4);">
+            <a href="#" class="navbar-brand"><img src="icon.png" alt="logo" width="60" height="60"/><span class="text-light ps-1 fst-italic">Restro</span><span class="fst-italic" style="color: yellow;">Mate</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-list"><a href="./restaurant.html" class="nav-link text-light fs-5">Restaurants</a></li>
+                    <li class="nav-list"><a href="./add_restaurant.html" class="nav-link text-light fs-5">Add Restaurants</a></li>
+                    <li class="nav-list"><a href="./aboutUs.html" class="nav-link text-light fs-5">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class=" pt-5 mb-3">
+        <article class="container">
+            <section class="text-center py-5 text-light">
+                <h1 class="display-5 mt-5 mb-3">Welcome to RestroMate</h1>
+                <!-- <p class="lead">Elevate your restaurant's performance with our efficient restaurant management system.</p> -->
+                <p class="lead">Welcome to RestroMate, where we empower restaurants to reach new heights of performance and success. Our comprehensive management tools are designed to streamline operations, enhance customer experiences, and boost profitability. Whether you're a small bistro or a bustling eatery, our platform is tailored to meet your unique needs. Join us in revolutionizing the restaurant industry and taking your establishment to the next level!</p>
+                <hr class="mx-3">
+                <p class="lead">Explore the features using the navigation links above and experience streamlined restaurant management.</p>
+            </section>
+        </article>
+        <article class="pt-3" style="background-color:#166432;" >
+            <section class="container">
+                <h1 class="my-4 text-warning">Menu Management</h1>
+                <div class="card-group">
+                    <div class="card me-4 rounded-3" style="background-color: #013328;">
+                        <img style="width: auto;" src="traditional-indian-soup-lentils-indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: darkorange;">Traditional Indian Soup lentils</h5>
+                            <p class="card-text text-light">Traditional lentil soup is a hearty and nutritious dish that has been enjoyed for centuries in various cultures around the world. Made from dried lentils, vegetables, and often flavored with herbs and spices, this soup is not only delicious but also packed with protein, fiber, and essential nutrients.</p>
+                          </div>
+                    </div>
+                    <div class="card rounded-3" style="background-color: #013328;">
+                        <img style="width : auto" src="indian-butter-chicken-black-bowl-black-background.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: darkorange;" >Indian Butter Chicken</h5>
+                            <p class="card-text text-light">Indian butter chicken, also known as "Murgh Makhani," is a popular and flavorful dish in Indian cuisine. It is made with tender chicken pieces that are marinated in a mixture of yogurt and spices, then cooked in a creamy tomato-based sauce. The sauce is rich and buttery, with a blend of spices that gives it a distinctive flavor.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="container mt-2">
-            <h1 class="my-4">Order Tracking</h1>
-            <div class="card-group">
-                <div class="card me-4">
-                    <img style="width: auto;" src="https://placehold.co/400x300/EFEFEFF/grey?text=Special Order 1" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Order #1</h5>
-                        <p class="card-text">Details and status of the first order. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      </div>
-                </div>
-                <div class="card">
-                    <img style="width : auto" src="https://placehold.co/400x300/EFEFEFF/grey?text=Special Order 2" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Order #1</h5>
-                        <p class="card-text">Details and status of the second order. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+            <section class="container mt-2" >
+                <h1 class="my-4 text-warning">Order Tracking</h1>
+                <div class="card-group rounded-3">
+                    <div class="card me-4" style="background-color: #013328;">
+                        <img style="width: auto;" src="order2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: darkorange;">Order #1</h5>
+                            <p class="card-text text-light" >Details and status of the first order. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                          </div>
+                    </div>
+                    <div class="card rounded-3" style="background-color: #013328;">
+                        <img style="width : auto" src="order2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: darkorange;">Order #2</h5>
+                            <p class="card-text text-light" >Details and status of the second order. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="container mt-4">
-            <h1 class="mb-4">About BistroPal</h1>
-            <p>Discover the story behind BistroPal and how we strive to revolutionize restaurant management for businesses of all sizes.</p>
-        </section>
-        
-
+            </section>
+            <section class="container pt-4 pb-4">
+                <h1 class="mb-4 text-warning">About RestroMate</h1>
+                <p class="text-light">Discover the story behind RestroMate and how we strive to revolutionize restaurant management for businesses of all sizes.</p>
+            </section>
+        </article>
     </main>
-    <footer class="text-center mt-5">
-        <p>© 2023 BistroPal. All rights reserved.</p>
+    <footer class="text-center mt-1 text-light">
+        <p>© 2023 RestroMate. All rights reserved.</p>
     </footer>
     
     

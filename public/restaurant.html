@@ -8,44 +8,45 @@
     
     <title>Restaurants</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-3">
-        <a href="./index.html" class="navbar-brand">BistroPal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-list"><a href="#" class="nav-link">Restaurants</a></li>
-                <li class="nav-list"><a href="./add_restaurant.html" class="nav-link">Add Restaurants</a></li>
-                <li class="nav-list"><a href="./aboutUs.html" class="nav-link">About Us</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <main id="main" class="container mt-5 p-5 z-index-1">
-        <h1>Restaurant List</h1>
-        <section class="mb-3">
-            <label for="cuisineFilter">Filter By Cuisine :</label>
-            <select id="cuisineFilter" name="cuisineFilter" onchange="applyFilter()" class="form-control" >
-                <option value="All">All</option>
-                <option value="Italian">Italian</option>
-                <option value="Mexican">Mexican</option>
-            </select>
-        </section>
-        <section class="mb-3">
-            <label for="sortOptions">Filter By Cuisine :</label>
-            <select id="sortOptions" name="sortOptions" onchange="applySort()" class="form-control" >
-                <option value="name">Name</option>
-                <option value="rating">Rating</option>
-            </select>
-        </section>
-        <ul id="list" class="list-group "></ul>
-
-    </main id="main">
-    <footer class="text-center mt-5">
-        <p>© 2023 BistroPal. All rights reserved.</p>
+<body style="background-color: #013328;">
+    <header class="pb-2 mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 container" style="background-color: rgb(4, 145, 4);border-radius: 0 0 32px 32px ;">
+            <a href="./index.html" class="navbar-brand"><img src="icon.png" alt="logo" width="60" height="60"/><span class="text-light ps-1 fst-italic fs-5">Restro</span><span class="fst-italic fs-5" style="color: yellow;">Mate</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-list"><a href="#" class="nav-link text-light fs-5">Restaurants</a></li>
+                    <li class="nav-list"><a href="./add_restaurant.html" class="nav-link text-light fs-5">Add Restaurants</a></li>
+                    <li class="nav-list"><a href="./aboutUs.html" class="nav-link text-light fs-5">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="container pt-5 mb-3">
+        <article class="pt-5 text-light">
+            <h1 class="display-6" style="color: darkorange;">Restaurant List</h1>
+            <section class="mb-3">
+                <label for="cuisineFilter">Filter By Cuisine :</label>
+                <select id="cuisineFilter" name="cuisineFilter" onchange="applyFilter()" class="form-control bg-secondary bg-gradient text-light" >
+                    <option value="All">All</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                </select>
+            </section>
+            <section class="mb-3">
+                <label for="sortOptions">Filter By Cuisine :</label>
+                <select id="sortOptions" name="sortOptions" onchange="applySort()" class="form-control bg-secondary bg-gradient text-light" >
+                    <option value="name">Name</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </section>
+            <ul id="list" class="list-group" ></ul>
+        </article>
+    </main>
+    <footer class="text-center text-light mt-5">
+        <p>© 2023 RestroMate. All rights reserved.</p>
     </footer>
 
 
@@ -63,14 +64,29 @@
             restaurants.map(restaurant =>{
                 const listItem = document.createElement('li');
                 listItem.className='list-group-item';
+                listItem.style.backgroundColor='#166432';
+                listItem.style.margin = "2px 0 2px 0";
+                listItem.style.borderRadius = "20px";
                 listItem.innerHTML=`
-                    <h4>${restaurant.name}</h4>
-                    <p>Cuisine : ${restaurant.cuisine}</p>
-                    <p>Address : ${restaurant.address} , ${restaurant.city}</p>
-                    <p>Rating : ${restaurant.rating}</p>
-                    <button class="btn btn-primary" onClick="viewDetails('${restaurant._id}')">View Details</button>
-                    <button class="btn btn-danger ms-2" onClick="deleteRestauran('${restaurant._id}')">Delete</button>
-                    <button class="btn btn-warning ms-2" onClick="updRestaurant('${restaurant._id}')">Update</button>
+                    <div class="d-flex justify-content-center align-items-center text-light">
+                        <div class="text-center" style="width:50%">
+                            <h4>${restaurant.name}</h4>
+                            <p>Cuisine : ${restaurant.cuisine}</p>
+                            <p>Address : ${restaurant.address} , ${restaurant.city}</p>
+                            <p>Rating : ${restaurant.rating}</p>
+                        </div>
+                        <div class="row justify-content-center align-items-center" style="width:50%">
+                                <div class="col">
+                                    <button class="btn btn-primary" onClick="viewDetails('${restaurant._id}')">View Details</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-danger ms-2" onClick="deleteRestauran('${restaurant._id}')">Delete</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-warning ms-2" onClick="updRestaurant('${restaurant._id}')">Update</button>
+                                </div>
+                        </div>
+                    </div>
                 `;
                 list.appendChild(listItem);
             });

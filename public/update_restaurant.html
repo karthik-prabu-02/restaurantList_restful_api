@@ -8,51 +8,55 @@
     
     <title>Update Restaurant</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-3">
-        <a href="./index.html" class="navbar-brand">BistroPal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-list"><a href="./restaurant.html" class="nav-link">Restaurants</a></li>
-                <li class="nav-list"><a href="./add_restaurant.html" class="nav-link">Add Restaurants</a></li>
-                <li class="nav-list"><a href="./aboutUs.html" class="nav-link">About Us</a></li>
-            </ul>
-        </div>
-    </nav>
+<body style="background-color: #013328;">
+    <header class="pb-2 mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 container" style="background-color: rgb(4, 145, 4);border-radius: 0 0 32px 32px ;">
+            <a href="./index.html" class="navbar-brand"><img src="icon.png" alt="logo" width="60" height="60"/><span class="text-light ps-1 fst-italic">Restro</span><span class="fst-italic" style="color: yellow;">Mate</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-list"><a href="./restaurant.html" class="nav-link text-light fs-5">Restaurants</a></li>
+                    <li class="nav-list"><a href="./add_restaurant.html" class="nav-link text-light fs-5">Add Restaurants</a></li>
+                    <li class="nav-list"><a href="./aboutUs.html" class="nav-link text-light fs-5">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main class="container mt-5 p-5">
-        <h1 class="display-6">Update Restaurants</h1>
-        <div id="success" class="alert alert-success h5" role="alert" style="display: none;">Restaurant updated successfully</div>
-        <form class="form" id="updform" onsubmit="updateRestaurant(event)">
-            <div class="form-group mb-3">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group mb-3">
-                <label for="cuisine">Cusine:</label>
-                <input type="text" class="form-control" id="cuisine" name="cuisine" required>
-            </div>
-            <div class="form-group mb-3">
-                <label for="address">Address:</label>
-                <input type="text" class="form-control" id="address" name="address" required>
-            </div>
-            <div class="form-group mb-3">
-                <label for="city">City:</label>
-                <input type="text" class="form-control" id="city" name="city" required>
-            </div>
-            <div class="form-group mb-3">
-                <label for="rating">Rating:</label>
-                <input type="text" class="form-control" id="rating" name="rating" required>
-                <p id="ratingValidation" class="text-danger my-2"></p>
-            </div>
-            <button type="submit" class="btn btn-primary">Update Restaurants</button>
-        </form>
+        <article class="mt-5">
+            <h1 class="display-6" style="color: darkorange;">Update Restaurants</h1>
+            <div id="success" class="alert alert-success h5" role="alert" style="display: none;">Restaurant updated successfully</div>
+            <form class="form" id="updform" onsubmit="updateRestaurant(event)">
+                <div class="form-group mb-3">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control bg-secondary bg-gradient text-light" id="name" name="name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="cuisine">Cusine:</label>
+                    <input type="text" class="form-control bg-secondary bg-gradient text-light" id="cuisine" name="cuisine" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control bg-secondary bg-gradient text-light" id="address" name="address" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control bg-secondary bg-gradient text-light" id="city" name="city" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="rating">Rating:</label>
+                    <input type="text" class="form-control bg-secondary bg-gradient text-light" id="rating" name="rating" required>
+                    <p id="ratingValidation" class="text-danger my-2"></p>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Restaurants</button>
+            </form>
+        </article>
     </main>
-    <footer class="text-center mt-5">
-        <p>© 2023 BistroPal. All rights reserved.</p>
+    <footer class="text-center text-light mt-5">
+        <p>© 2023 RestroMates. All rights reserved.</p>
     </footer>
 
 
@@ -99,6 +103,14 @@
                 // Optionally, you can update the UI or perform other actions after successful update
                 // const success = document.getElementById('success');
                 // success.style.display = "block";
+
+                // document.getElementById('name').value = "" ;
+                // document.getElementById('cuisine').value = "";
+                // document.getElementById('address').value = "";
+                // document.getElementById('city').value = "";
+                // document.getElementById('rating').value = "";
+
+                window.location.replace('/restaurant.html');
             } else {
                 console.error(`Failed to update restaurant with ID ${restaurantId}`);
 
